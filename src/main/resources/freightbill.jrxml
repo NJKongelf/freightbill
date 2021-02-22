@@ -1,0 +1,665 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.16.0.final using JasperReports Library version 6.16.0-48579d909b7943b64690c65c71e07e0b80981928  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Blank_A4" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="e743c3a3-2358-4d27-af47-494d38bf8759">
+    <property name="com.jaspersoft.studio.data.defaultdataadapter" value="One Empty Record"/>
+    <subDataset name="Dataset1" uuid="63435464-d99f-4a6c-bbeb-8d285b21cea8">
+        <queryString>
+            <![CDATA[]]>
+        </queryString>
+    </subDataset>
+    <parameter name="FreightBillNumber" class="java.lang.String"/>
+    <parameter name="Transporter" class="java.lang.String"/>
+    <parameter name="SenderName" class="java.lang.String"/>
+    <parameter name="SenderStreet" class="java.lang.String"/>
+    <parameter name="SenderPhone" class="java.lang.String"/>
+    <parameter name="SenderReference" class="java.lang.String"/>
+    <parameter name="SenderCountry" class="java.lang.String"/>
+    <parameter name="SenderCity" class="java.lang.String"/>
+    <parameter name="ReceiverName" class="java.lang.String"/>
+    <parameter name="ReceiverCountry" class="java.lang.String"/>
+    <parameter name="ReceiverCity" class="java.lang.String"/>
+    <parameter name="ReceiverZip" class="java.lang.String"/>
+    <parameter name="ReceiverStreet" class="java.lang.String"/>
+    <parameter name="ReceiverPhone" class="java.lang.String"/>
+    <parameter name="ReceiverReference" class="java.lang.String"/>
+    <parameter name="TransportInstructions" class="java.lang.String"/>
+    <parameter name="TransportInstructionsCode" class="java.lang.String"/>
+    <parameter name="DeliveryInstructions" class="java.lang.String"/>
+    <parameter name="SenderZip" class="java.lang.String"/>
+    <parameter name="SummaryTotalColli" class="java.lang.String"/>
+    <parameter name="PaymentResponsibility" class="java.lang.String"/>
+    <parameter name="SummaryTotalGrossWeight" class="java.lang.String"/>
+    <parameter name="SummaryTypeCode" class="java.lang.String"/>
+    <queryString>
+        <![CDATA[]]>
+    </queryString>
+    <detail>
+        <band height="802">
+            <line>
+                <reportElement x="-1" y="0" width="1" height="802" uuid="c9a246b1-4a3f-4048-b736-712db637c57b"/>
+            </line>
+            <line>
+                <reportElement x="561" y="0" width="1" height="802" uuid="6509f77c-2ac7-4b39-bd1c-fdd1f9534571"/>
+            </line>
+            <line>
+                <reportElement x="0" y="0" width="560" height="1" uuid="6e5f6b1a-ab65-401a-a7cc-eb3437d9c5db"/>
+            </line>
+            <line>
+                <reportElement x="0" y="720" width="560" height="1" uuid="5566912d-9641-4408-bcdb-bed1e9739404"/>
+            </line>
+            <rectangle>
+                <reportElement x="0" y="1" width="280" height="89" uuid="756f746b-1b1a-4769-9572-69491bba880d"/>
+            </rectangle>
+            <rectangle>
+                <reportElement x="0" y="90" width="280" height="87" uuid="cee917ce-c67c-41b3-9c16-56b93d00688c"/>
+            </rectangle>
+            <rectangle>
+                <reportElement x="280" y="1" width="140" height="29" uuid="bc8e21b2-e6a1-4749-93a3-1e503cf248c7"/>
+            </rectangle>
+            <rectangle>
+                <reportElement x="420" y="1" width="141" height="29" uuid="2e6a91b4-1933-4501-b7f9-d9c493df5bb5"/>
+            </rectangle>
+            <rectangle>
+                <reportElement x="280" y="30" width="281" height="30" uuid="da9222da-d60b-41e1-abac-ea06932930fb"/>
+            </rectangle>
+            <rectangle>
+                <reportElement x="280" y="60" width="281" height="30" uuid="3bf9bf83-9456-4f34-8686-38c405dade22"/>
+            </rectangle>
+            <rectangle>
+                <reportElement x="280" y="90" width="281" height="29" uuid="5b5084f2-8984-46cc-9deb-e0ffe8ff3753"/>
+            </rectangle>
+            <rectangle>
+                <reportElement x="280" y="119" width="281" height="29" uuid="2abe1503-5cce-44d1-b682-345f067b43fc"/>
+            </rectangle>
+            <rectangle>
+                <reportElement x="280" y="148" width="281" height="29" uuid="d450e409-878b-42c9-8d02-f4840248883d"/>
+            </rectangle>
+            <line>
+                <reportElement x="280" y="760" width="1" height="40" uuid="ca86f26e-e5e3-48ac-aee7-a954e43ff495"/>
+            </line>
+            <staticText>
+                <reportElement x="10" y="0" width="200" height="10" uuid="81125fd8-3385-450f-b882-6860f73058e7"/>
+                <textElement>
+                    <font size="6"/>
+                </textElement>
+                <text><![CDATA[Godsavsändare, postadress]]></text>
+            </staticText>
+            <staticText>
+                <reportElement x="10" y="90" width="200" height="10" uuid="d40839a3-539b-4cd1-bf30-3123d43b1ec8"/>
+                <textElement>
+                    <font size="6"/>
+                </textElement>
+                <text><![CDATA[Godsmottagare, lev.adress]]></text>
+            </staticText>
+            <staticText>
+                <reportElement x="281" y="0" width="138" height="10" uuid="711c06ba-b248-47fd-b1ad-8883018ff180"/>
+                <textElement>
+                    <font size="6"/>
+                </textElement>
+                <text><![CDATA[Utskriftsdatum]]></text>
+            </staticText>
+            <textField textAdjust="ScaleFont" pattern="YYYY-MM-dd">
+                <reportElement x="300" y="10" width="118" height="20" uuid="0bcf824e-4768-4132-aa25-3da6df207610"/>
+                <textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+            </textField>
+            <staticText>
+                <reportElement x="281" y="30" width="138" height="10" uuid="d2910d6f-3752-4e7b-9ce2-afbd58bccbcd"/>
+                <textElement>
+                    <font size="6"/>
+                </textElement>
+                <text><![CDATA[Godsavsändarens referenser]]></text>
+            </staticText>
+            <staticText>
+                <reportElement x="281" y="60" width="138" height="10" uuid="eb7aedcb-4816-4265-b8fd-c44ec5642dfa"/>
+                <textElement>
+                    <font size="6"/>
+                </textElement>
+                <text><![CDATA[Godsmottagarens referenser]]></text>
+            </staticText>
+            <staticText>
+                <reportElement x="281" y="90" width="148" height="10" uuid="45f990f9-a649-44f3-aee4-b7fee2417d22"/>
+                <textElement>
+                    <font size="6"/>
+                </textElement>
+                <text><![CDATA[Särskilda transportinstruktioner (värme, kyla, etc)]]></text>
+            </staticText>
+            <rectangle>
+                <reportElement x="0" y="148" width="280" height="29" uuid="d9a6da61-7ac9-4c76-9cad-98d808f81986"/>
+            </rectangle>
+            <staticText>
+                <reportElement x="10" y="148" width="200" height="10" uuid="dcb53fdb-b7a1-4151-bc06-2e944ce30fe2"/>
+                <textElement>
+                    <font size="6"/>
+                </textElement>
+                <text><![CDATA[Bestämmelseort/-station (inkl postnr)]]></text>
+            </staticText>
+            <staticText>
+                <reportElement x="248" y="-14" width="64" height="14" uuid="f8a49c6a-7ba4-4fff-83e1-1429e8f19683"/>
+                <textElement>
+                    <font isBold="true"/>
+                </textElement>
+                <text><![CDATA[KÖRSEDEL]]></text>
+            </staticText>
+            <line>
+                <reportElement x="470" y="90" width="1" height="10" uuid="19a767b6-0c75-4e5e-a4fd-88b09bba3db2"/>
+            </line>
+            <staticText>
+                <reportElement x="470" y="90" width="90" height="10" uuid="86820352-468a-41d9-bf90-3e126ef04875"/>
+                <textElement>
+                    <font size="6"/>
+                </textElement>
+                <text><![CDATA[  Avtal nr]]></text>
+            </staticText>
+            <rectangle>
+                <reportElement x="280" y="119" width="80" height="29" uuid="cabe6c6b-b4c5-467c-87fc-6bbe6837d3c4"/>
+                <graphicElement>
+                    <pen lineWidth="2.0" lineStyle="Solid"/>
+                </graphicElement>
+            </rectangle>
+            <staticText>
+                <reportElement x="362" y="120" width="58" height="10" uuid="d461e634-5205-49bf-8fd0-868325c6b662"/>
+                <textElement>
+                    <font size="6"/>
+                </textElement>
+                <text><![CDATA[Giro nr]]></text>
+            </staticText>
+            <staticText>
+                <reportElement x="280" y="120" width="68" height="10" uuid="9da39e19-d8b5-42e0-a29e-5cd4065cd30b"/>
+                <textElement>
+                    <font size="6"/>
+                </textElement>
+                <text><![CDATA[Efterkrav Kr]]></text>
+            </staticText>
+            <line>
+                <reportElement x="280" y="130" width="80" height="1" uuid="e635d7d2-227e-4c3c-8944-41e0b53bbc1f"/>
+            </line>
+            <line>
+                <reportElement x="280" y="133" width="80" height="1" uuid="b6b82008-c6bc-4bb0-a726-e277ff820349"/>
+            </line>
+            <line>
+                <reportElement x="280" y="140" width="80" height="1" uuid="bf2bdb42-378b-416f-9e1f-a0151a97fed8"/>
+                <graphicElement>
+                    <pen lineWidth="10.0" lineStyle="Double"/>
+                </graphicElement>
+            </line>
+            <line>
+                <reportElement x="440" y="120" width="1" height="10" uuid="52ec780a-698b-4a5e-acfa-942a8ba543fa"/>
+            </line>
+            <staticText>
+                <reportElement x="450" y="120" width="70" height="10" uuid="db66cc64-3190-4196-9cae-7196c5de12fc"/>
+                <textElement>
+                    <font size="6"/>
+                </textElement>
+                <text><![CDATA[Faktura-/bokföringsnr]]></text>
+            </staticText>
+            <staticText>
+                <reportElement x="281" y="150" width="70" height="10" uuid="b1495332-9311-48a6-ba36-13554313d83c"/>
+                <textElement>
+                    <font size="6" isBold="true"/>
+                </textElement>
+                <text><![CDATA[Fraktbetalning]]></text>
+            </staticText>
+            <line>
+                <reportElement x="360" y="148" width="1" height="10" uuid="85943d02-1914-4431-805d-3689eb3405e9"/>
+            </line>
+            <line>
+                <reportElement x="440" y="148" width="1" height="10" uuid="8fa4c6b7-e38d-4326-986b-16aa896cbe0d"/>
+            </line>
+            <line>
+                <reportElement x="510" y="148" width="1" height="10" uuid="3fc73bae-3337-44cf-bd3e-da66cfd64b84"/>
+            </line>
+            <staticText>
+                <reportElement x="362" y="148" width="30" height="10" uuid="443c1362-0871-4bf5-a59b-dae671d2e8f5"/>
+                <textElement>
+                    <font size="6"/>
+                </textElement>
+                <text><![CDATA[  inkl (kod)]]></text>
+            </staticText>
+            <staticText>
+                <reportElement x="441" y="148" width="30" height="10" uuid="b584ae81-73cb-4360-8a9d-8670fbb5bea9"/>
+                <textElement>
+                    <font size="6"/>
+                </textElement>
+                <text><![CDATA[  exkl (kod)]]></text>
+            </staticText>
+            <staticText>
+                <reportElement x="511" y="148" width="30" height="10" uuid="2d8ce6b1-ee39-4eb0-8fb9-4a8ab3dfc360"/>
+                <textElement>
+                    <font size="6"/>
+                </textElement>
+                <text><![CDATA[ belopp Kr]]></text>
+            </staticText>
+            <rectangle>
+                <reportElement x="0" y="177" width="280" height="43" uuid="3959f3c5-3ed6-4f34-adc6-25cc6b4c6c69"/>
+            </rectangle>
+            <staticText>
+                <reportElement x="10" y="177" width="140" height="10" uuid="49e48067-f455-4262-91f0-e0d156bb0573"/>
+                <textElement>
+                    <font size="6"/>
+                </textElement>
+                <text><![CDATA[Leveransvisning ("Avisera","Efterkrav" o d)]]></text>
+            </staticText>
+            <line>
+                <reportElement x="180" y="177" width="1" height="10" uuid="3d88127f-f1d8-49f8-ae47-8fdc914cda8f"/>
+            </line>
+            <rectangle>
+                <reportElement x="189" y="220" width="91" height="29" uuid="6c293908-76b4-411f-a452-e5d8417bfaee"/>
+            </rectangle>
+            <rectangle>
+                <reportElement x="0" y="249" width="280" height="29" uuid="4dedcaba-b5ea-4814-84fb-89a8bd281fee"/>
+            </rectangle>
+            <rectangle>
+                <reportElement x="280" y="177" width="281" height="101" uuid="51ffd01a-b903-454c-a8e5-7bffbb96e710"/>
+            </rectangle>
+            <rectangle>
+                <reportElement x="0" y="220" width="100" height="29" uuid="fc0398c4-b1cb-4c00-94b7-d57f22594e65"/>
+            </rectangle>
+            <rectangle>
+                <reportElement x="100" y="220" width="89" height="29" uuid="9cf12054-9e81-450b-99f5-ce7be78b503c"/>
+            </rectangle>
+            <staticText>
+                <reportElement x="103" y="220" width="82" height="10" uuid="4675b4e1-f75e-4451-8255-7e107c7cbce5"/>
+                <textElement>
+                    <font size="6"/>
+                </textElement>
+                <text><![CDATA[Godsmottagarens pallreg-nr]]></text>
+            </staticText>
+            <staticText>
+                <reportElement x="194" y="222" width="80" height="10" uuid="80ba8c06-5da2-4d01-8e8a-909055df515a"/>
+                <textElement>
+                    <font size="6"/>
+                </textElement>
+                <text><![CDATA[Godsavsändarens pallreg-nr]]></text>
+            </staticText>
+            <staticText>
+                <reportElement x="5" y="249" width="275" height="10" uuid="40fc9b5b-9507-4c1b-9b00-8a33f75244a9"/>
+                <textElement>
+                    <font size="6"/>
+                </textElement>
+                <text><![CDATA[Lasttillbehör. Behållare (ägare,Typ,nr)/Presenningar (typ,ägare,antal)]]></text>
+            </staticText>
+            <staticText>
+                <reportElement x="190" y="177" width="90" height="10" uuid="bd20d620-bc7f-4ff4-b779-95a92cb76cfa"/>
+                <textElement>
+                    <font size="6"/>
+                </textElement>
+                <text><![CDATA[Telefon]]></text>
+            </staticText>
+            <componentElement>
+                <reportElement x="362" y="220" width="168" height="37" uuid="9b0c51c9-e5cf-4080-bc0b-64b9f5327ca6"/>
+                <jr:barbecue xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd" type="Code128" drawText="true" checksumRequired="false">
+                    <jr:codeExpression><![CDATA[$P{FreightBillNumber}]]></jr:codeExpression>
+                </jr:barbecue>
+            </componentElement>
+            <ellipse>
+                <reportElement x="40" y="222" width="20" height="10" uuid="579578f4-4e19-4b5f-b8fd-ea6cbf6313bc"/>
+            </ellipse>
+            <staticText>
+                <reportElement x="5" y="222" width="90" height="10" uuid="5ff9fd71-ca4c-4989-9f79-1dcf15f1ecf1"/>
+                <textElement>
+                    <font size="6"/>
+                </textElement>
+                <text><![CDATA[Antal godk     EUR    -pallar]]></text>
+            </staticText>
+            <line>
+                <reportElement x="140" y="278" width="1" height="22" uuid="4fee9e9f-9ebc-4d3b-a784-80e783fd6622"/>
+            </line>
+            <line>
+                <reportElement x="200" y="278" width="1" height="22" uuid="7ab0f10e-502b-4323-be18-61b2587995ab"/>
+            </line>
+            <line>
+                <reportElement x="330" y="278" width="1" height="22" uuid="c657c396-7c41-4505-8177-12309f33c99c"/>
+            </line>
+            <line>
+                <reportElement x="380" y="278" width="1" height="22" uuid="318281ae-091e-4edb-b53a-fbd377b7e263"/>
+            </line>
+            <line>
+                <reportElement x="469" y="278" width="1" height="22" uuid="efd0db64-ef13-4850-b88f-d08f0b20c11d"/>
+            </line>
+            <textField isBlankWhenNull="true">
+                <reportElement x="432" y="5" width="116" height="20" uuid="45b88ed6-735b-477a-8e54-ea13316e2fad"/>
+                <textElement>
+                    <font isBold="true"/>
+                </textElement>
+                <textFieldExpression><![CDATA[$P{FreightBillNumber}]]></textFieldExpression>
+            </textField>
+            <textField>
+                <reportElement x="420" y="-15" width="140" height="15" uuid="ca76f3a4-32a4-4184-8608-bc16e1d06d7c"/>
+                <textElement>
+                    <font size="8"/>
+                </textElement>
+                <textFieldExpression><![CDATA[$P{Transporter}]]></textFieldExpression>
+            </textField>
+            <textField>
+                <reportElement x="10" y="10" width="250" height="14" uuid="12b930fb-6ea3-4031-8469-bac356a9dd94"/>
+                <textElement>
+                    <font size="8" isBold="false"/>
+                </textElement>
+                <textFieldExpression><![CDATA[$P{SenderName}]]></textFieldExpression>
+            </textField>
+            <textField>
+                <reportElement x="280" y="40" width="282" height="20" uuid="3aa31f96-d10e-44e4-b7c2-7f8a7bb8857a"/>
+                <textElement>
+                    <font size="8" isBold="true"/>
+                </textElement>
+                <textFieldExpression><![CDATA[$P{SenderReference}]]></textFieldExpression>
+            </textField>
+            <textField>
+                <reportElement x="280" y="70" width="282" height="20" uuid="279fdcb1-2244-4024-80bd-8a0e65a49b0e"/>
+                <textElement>
+                    <font size="8" isBold="true"/>
+                </textElement>
+                <textFieldExpression><![CDATA[$P{ReceiverReference}]]></textFieldExpression>
+            </textField>
+            <textField>
+                <reportElement x="279" y="100" width="192" height="20" uuid="3b89554e-c784-40ee-a20e-8bcd0f0a3c62"/>
+                <textElement>
+                    <font size="8" isBold="true"/>
+                </textElement>
+                <textFieldExpression><![CDATA[$P{TransportInstructions}]]></textFieldExpression>
+            </textField>
+            <textField>
+                <reportElement x="474" y="99" width="86" height="20" uuid="7cbbbc27-fb65-477f-8a01-eecf12b38eaa"/>
+                <textElement>
+                    <font size="6" isBold="true"/>
+                </textElement>
+                <textFieldExpression><![CDATA[$P{TransportInstructionsCode}]]></textFieldExpression>
+            </textField>
+            <textField>
+                <reportElement x="0" y="187" width="280" height="32" uuid="76ca5c1d-d8e6-4589-850c-8de48bba349f"/>
+                <textElement>
+                    <font size="6" isBold="true"/>
+                </textElement>
+                <textFieldExpression><![CDATA[$P{DeliveryInstructions}]]></textFieldExpression>
+            </textField>
+            <textField>
+                <reportElement x="10" y="28" width="250" height="22" uuid="cbc26317-e769-4c4d-9e64-c44fd32f9e79"/>
+                <textElement>
+                    <font size="8" isBold="false"/>
+                </textElement>
+                <textFieldExpression><![CDATA[$P{SenderStreet}]]></textFieldExpression>
+            </textField>
+            <textField>
+                <reportElement x="10" y="50" width="100" height="20" uuid="95846109-ade2-4263-b59f-54834214db68"/>
+                <textElement>
+                    <font size="8" isBold="false"/>
+                </textElement>
+                <textFieldExpression><![CDATA[$P{SenderZip}]]></textFieldExpression>
+            </textField>
+            <textField>
+                <reportElement x="120" y="50" width="140" height="20" uuid="c6330e8a-ad2d-43cc-9abb-6a661c66378a"/>
+                <textElement>
+                    <font size="8" isBold="false"/>
+                </textElement>
+                <textFieldExpression><![CDATA[$P{SenderCity}]]></textFieldExpression>
+            </textField>
+            <textField>
+                <reportElement x="20" y="70" width="210" height="20" uuid="b77da6bd-47a1-45ce-b7c1-4f686832e39e"/>
+                <textElement>
+                    <font size="8" isBold="false"/>
+                </textElement>
+                <textFieldExpression><![CDATA[$P{SenderCountry}]]></textFieldExpression>
+            </textField>
+            <textField>
+                <reportElement x="120" y="160" width="140" height="16" uuid="d8b80a93-fee7-455c-bf94-f5abc9b428c2"/>
+                <textElement>
+                    <font size="8" isBold="true"/>
+                </textElement>
+                <textFieldExpression><![CDATA[$P{ReceiverCity}]]></textFieldExpression>
+            </textField>
+            <textField>
+                <reportElement x="10" y="160" width="100" height="16" uuid="b55ccfc0-3428-4de1-af3a-dcf6f81feee5"/>
+                <textElement>
+                    <font size="8" isBold="true"/>
+                </textElement>
+                <textFieldExpression><![CDATA[$P{ReceiverZip}]]></textFieldExpression>
+            </textField>
+            <textField>
+                <reportElement x="10" y="120" width="250" height="28" uuid="076d7575-cdb0-46ed-8668-25be6d349c57"/>
+                <textElement>
+                    <font size="8" isBold="true"/>
+                </textElement>
+                <textFieldExpression><![CDATA[$P{ReceiverStreet}]]></textFieldExpression>
+            </textField>
+            <textField>
+                <reportElement x="10" y="99" width="250" height="20" uuid="6898f74d-1cd9-44c2-bd85-fc38bd9c6c8b"/>
+                <textElement>
+                    <font size="8" isBold="true"/>
+                </textElement>
+                <textFieldExpression><![CDATA[$P{ReceiverName}]]></textFieldExpression>
+            </textField>
+            <staticText>
+                <reportElement x="0" y="280" width="130" height="10" uuid="ecef4799-f3e7-4997-a03b-37856b4b91ed"/>
+                <textElement>
+                    <font size="6"/>
+                </textElement>
+                <text><![CDATA[Godsmärkning/vagnsnummer/Kolliantal]]></text>
+            </staticText>
+            <staticText>
+                <reportElement x="150" y="280" width="30" height="20" uuid="60af3a38-00cc-4684-885b-a4daaa825c49"/>
+                <textElement>
+                    <font size="6"/>
+                </textElement>
+                <text><![CDATA[Koliantal
+slag]]></text>
+            </staticText>
+            <staticText>
+                <reportElement x="210" y="280" width="120" height="20" uuid="3160dcdb-6fc9-4120-acd5-fe73b61eb072"/>
+                <textElement>
+                    <font size="6"/>
+                </textElement>
+                <text><![CDATA[Varuslag (om i container/flak även art, ägare,nr,längd )]]></text>
+            </staticText>
+            <staticText>
+                <reportElement x="331" y="280" width="49" height="20" uuid="148b9c39-53d7-43fe-b25b-018ee8f11439"/>
+                <textElement>
+                    <font size="6"/>
+                </textElement>
+                <text><![CDATA[Varunummer]]></text>
+            </staticText>
+            <staticText>
+                <reportElement x="380" y="280" width="89" height="20" uuid="2c928366-fa39-44e5-b8f6-c621cb117e99"/>
+                <textElement>
+                    <font size="6"/>
+                </textElement>
+                <text><![CDATA[Bruttovikt Kg]]></text>
+            </staticText>
+            <staticText>
+                <reportElement x="470" y="280" width="92" height="20" uuid="4587f5c2-406a-4742-bd55-aba181d48461"/>
+                <textElement>
+                    <font size="6"/>
+                </textElement>
+                <text><![CDATA[Volym,m (om i container/flak godsets vikt)]]></text>
+            </staticText>
+            <line>
+                <reportElement x="234" y="721" width="1" height="39" uuid="19fd4cc0-eb00-4d49-a580-3fb71ae7289c"/>
+            </line>
+            <line>
+                <reportElement x="234" y="760" width="47" height="1" uuid="8e93a44f-68ea-4712-a91d-49dba5b490da"/>
+            </line>
+            <line>
+                <reportElement x="280" y="720" width="1" height="40" uuid="acfb0bd4-a7b3-40d7-9bea-08fa840247c4"/>
+                <graphicElement>
+                    <pen lineColor="#E8E3E3"/>
+                </graphicElement>
+            </line>
+            <line>
+                <reportElement x="235" y="740" width="45" height="1" uuid="6864cc0d-e2b8-4942-840f-138228eb34d6"/>
+                <graphicElement>
+                    <pen lineColor="#E8E3E3"/>
+                </graphicElement>
+            </line>
+            <line>
+                <reportElement x="281" y="750" width="279" height="1" uuid="5136b866-ab62-42a6-8396-18c2ccd284e2"/>
+                <graphicElement>
+                    <pen lineColor="#E8E3E3"/>
+                </graphicElement>
+            </line>
+            <line>
+                <reportElement x="429" y="750" width="1" height="50" uuid="0a3941d5-6f4a-4e6a-be88-7f42d9a3485e"/>
+                <graphicElement>
+                    <pen lineColor="#E8E3E3"/>
+                </graphicElement>
+            </line>
+            <textField>
+                <reportElement x="15" y="690" width="131" height="19" uuid="95eca1ea-2de5-4fa8-96d5-3d641a227ad6"/>
+                <textFieldExpression><![CDATA[$P{SummaryTotalColli}]]></textFieldExpression>
+            </textField>
+            <textField textAdjust="ScaleFont">
+                <reportElement isPrintRepeatedValues="false" x="281" y="160" width="79" height="17" uuid="a5222b1e-abbc-4682-93b1-4c009e959508"/>
+                <textElement textAlignment="Left">
+                    <font size="8" isBold="true"/>
+                </textElement>
+                <textFieldExpression><![CDATA[$P{PaymentResponsibility}]]></textFieldExpression>
+            </textField>
+            <staticText>
+                <reportElement x="5" y="720" width="224" height="40" uuid="6704f48a-65cf-40ae-ba60-2f41796737ee"/>
+                <textElement>
+                    <font size="6"/>
+                </textElement>
+                <text><![CDATA[Synlig skada eller minsking anmäls omdelbart till Transportföretaget och noteras. Godsutlämnaren bestryker noteringen med sin signatur och ev bilnummer
+
+Skada som inte är synlig vid mottagandet anmäls till transportföretaget snarast dock senast inom sju(7) dagar.]]></text>
+            </staticText>
+            <staticText>
+                <reportElement x="180" y="670" width="68" height="10" uuid="275583e3-68cb-4ca3-a9ab-581a016d632e"/>
+                <textElement>
+                    <font size="6"/>
+                </textElement>
+                <text><![CDATA[Total Bruttovikt , Kg]]></text>
+            </staticText>
+            <textField>
+                <reportElement x="160" y="690" width="131" height="19" uuid="c132f777-fc27-4ee4-a518-ec1cc2ea472d"/>
+                <textFieldExpression><![CDATA[$P{SummaryTotalGrossWeight}]]></textFieldExpression>
+            </textField>
+            <staticText>
+                <reportElement x="335" y="670" width="74" height="10" uuid="60845567-e25d-492d-8f52-0115fd6437b4"/>
+                <textElement>
+                    <font size="6"/>
+                </textElement>
+                <text><![CDATA[Kod Kubik,Flakm,ant,kg]]></text>
+            </staticText>
+            <textField>
+                <reportElement x="315" y="690" width="131" height="19" uuid="a44a4146-c609-4de9-b09d-a831bcac91cc"/>
+                <textFieldExpression><![CDATA[$P{SummaryTypeCode}]]></textFieldExpression>
+            </textField>
+            <staticText>
+                <reportElement x="31" y="670" width="68" height="10" uuid="f98df18d-1902-4450-90b1-f4e6ce29ac84"/>
+                <textElement>
+                    <font size="6"/>
+                </textElement>
+                <text><![CDATA[Totalt antal kolli]]></text>
+            </staticText>
+            <staticText>
+                <reportElement x="5" y="770" width="44" height="20" uuid="c71540e1-994d-43a6-bacd-9cbcf75f89cb"/>
+                <textElement>
+                    <font size="6" isBold="true"/>
+                </textElement>
+                <text><![CDATA[Sändningen
+kvitteras]]></text>
+            </staticText>
+            <staticText>
+                <reportElement x="40" y="770" width="8" height="18" uuid="c0a5b4de-adf8-4caf-83eb-e56c20798d64"/>
+                <textElement>
+                    <font size="13" isBold="true"/>
+                </textElement>
+                <text><![CDATA[X]]></text>
+            </staticText>
+            <line>
+                <reportElement x="60" y="780" width="220" height="1" uuid="d9bcc8d1-b853-4a0a-8057-7cd1af1db6fe"/>
+                <graphicElement>
+                    <pen lineStyle="Dashed"/>
+                </graphicElement>
+            </line>
+            <staticText>
+                <reportElement x="56" y="780" width="224" height="22" uuid="07ad867a-11fc-4255-ad13-731080af74d6"/>
+                <textElement>
+                    <font size="6"/>
+                </textElement>
+                <text><![CDATA[Godsmottagarens firmateckning (helst stämpel) och namnteckning (med namnförtydligande om så behövs) för den som tagit emot godset]]></text>
+            </staticText>
+            <staticText>
+                <reportElement x="56" y="760" width="24" height="10" uuid="bcbe9fcd-0bc2-4bd4-acac-925f188d0dec"/>
+                <textElement>
+                    <font size="6"/>
+                </textElement>
+                <text><![CDATA[Datum]]></text>
+            </staticText>
+            <staticText>
+                <reportElement x="106" y="760" width="172" height="10" uuid="26d61f15-b456-441e-89f0-d6e58f487f2e"/>
+                <textElement>
+                    <font size="6"/>
+                </textElement>
+                <text><![CDATA[Godsmottagarens(ombudets) namnteckning]]></text>
+            </staticText>
+            <staticText>
+                <reportElement x="235" y="720" width="24" height="10" uuid="33943c7d-d7de-42f3-8643-90ad10508d82"/>
+                <textElement>
+                    <font size="6"/>
+                </textElement>
+                <text><![CDATA[Moms kr]]></text>
+            </staticText>
+            <staticText>
+                <reportElement x="235" y="741" width="38" height="10" uuid="541cf57c-4967-4369-a29e-efe803952b9d"/>
+                <textElement>
+                    <font size="6"/>
+                </textElement>
+                <text><![CDATA[Kontant betalt]]></text>
+            </staticText>
+            <line>
+                <reportElement x="235" y="751" width="45" height="1" uuid="58057318-a0bf-4761-a067-83a752caf88a"/>
+                <graphicElement>
+                    <pen lineColor="#E8E3E3"/>
+                </graphicElement>
+            </line>
+            <line>
+                <reportElement x="234" y="752" width="46" height="8" uuid="2b33a36e-6b8e-4c3f-b0ce-8a482142dfb6"/>
+                <graphicElement>
+                    <pen lineWidth="4.0" lineStyle="Double"/>
+                </graphicElement>
+            </line>
+            <staticText>
+                <reportElement x="280" y="720" width="80" height="10" uuid="ba49eae5-1483-45ef-aaad-8197130ab7d7"/>
+                <textElement>
+                    <font size="6"/>
+                </textElement>
+                <text><![CDATA[Avisering mottagen (namn)]]></text>
+            </staticText>
+            <staticText>
+                <reportElement x="370" y="720" width="30" height="10" uuid="f105d60f-26af-45dc-8970-3c38154fcc58"/>
+                <textElement>
+                    <font size="6"/>
+                </textElement>
+                <text><![CDATA[Datum]]></text>
+            </staticText>
+            <staticText>
+                <reportElement x="440" y="720" width="30" height="10" uuid="560589ae-d586-49c8-9ce2-38afd79577c9"/>
+                <textElement>
+                    <font size="6"/>
+                </textElement>
+                <text><![CDATA[Klockan]]></text>
+            </staticText>
+            <staticText>
+                <reportElement x="510" y="720" width="30" height="10" uuid="afbc6dee-526d-4544-8ef6-7439ba43e486"/>
+                <textElement>
+                    <font size="6"/>
+                </textElement>
+                <text><![CDATA[Sign]]></text>
+            </staticText>
+            <staticText>
+                <reportElement x="285" y="752" width="133" height="10" uuid="10fd9ace-9036-4336-a48e-ba309c5e05c9"/>
+                <textElement>
+                    <font size="6"/>
+                </textElement>
+                <text><![CDATA[Sändningens ankomstdatum (ev stämpel)]]></text>
+            </staticText>
+            <staticText>
+                <reportElement x="440" y="752" width="120" height="18" uuid="fb8b4792-1696-4400-b739-4b6a2de5ece4"/>
+                <textElement>
+                    <font size="6"/>
+                </textElement>
+                <text><![CDATA[Transportföretagets avsändningsstämpel ev vägningsstämpel]]></text>
+            </staticText>
+        </band>
+    </detail>
+</jasperReport>
