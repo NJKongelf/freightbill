@@ -1,12 +1,88 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- Created with Jaspersoft Studio version 6.16.0.final using JasperReports Library version 6.16.0-48579d909b7943b64690c65c71e07e0b80981928  -->
 <jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Blank_A4" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="e743c3a3-2358-4d27-af47-494d38bf8759">
-    <property name="com.jaspersoft.studio.data.defaultdataadapter" value="One Empty Record"/>
+    <style name="Table_TH" mode="Opaque" backcolor="#F0F8FF">
+        <box>
+            <pen lineWidth="0.5" lineColor="#000000"/>
+            <topPen lineWidth="0.5" lineColor="#000000"/>
+            <leftPen lineWidth="0.5" lineColor="#000000"/>
+            <bottomPen lineWidth="0.5" lineColor="#000000"/>
+            <rightPen lineWidth="0.5" lineColor="#000000"/>
+        </box>
+    </style>
+    <style name="Table_CH" mode="Opaque" backcolor="#BFE1FF">
+        <box>
+            <pen lineWidth="0.5" lineColor="#000000"/>
+            <topPen lineWidth="0.5" lineColor="#000000"/>
+            <leftPen lineWidth="0.5" lineColor="#000000"/>
+            <bottomPen lineWidth="0.5" lineColor="#000000"/>
+            <rightPen lineWidth="0.5" lineColor="#000000"/>
+        </box>
+    </style>
+    <style name="Table_TD" mode="Opaque" backcolor="#FFFFFF">
+        <box>
+            <pen lineWidth="0.5" lineColor="#000000"/>
+            <topPen lineWidth="0.5" lineColor="#000000"/>
+            <leftPen lineWidth="0.5" lineColor="#000000"/>
+            <bottomPen lineWidth="0.5" lineColor="#000000"/>
+            <rightPen lineWidth="0.5" lineColor="#000000"/>
+        </box>
+    </style>
+    <style name="Table 1_TH" mode="Opaque" backcolor="#F0F8FF">
+        <box>
+            <topPen lineWidth="0.5" lineColor="#000000"/>
+            <bottomPen lineWidth="0.5" lineColor="#000000"/>
+        </box>
+    </style>
+    <style name="Table 1_CH" mode="Opaque" backcolor="#BFE1FF">
+        <box>
+            <topPen lineWidth="0.5" lineColor="#000000"/>
+            <bottomPen lineWidth="0.5" lineColor="#000000"/>
+        </box>
+    </style>
+    <style name="Table 1_TD" mode="Opaque" backcolor="#FFFFFF">
+        <box>
+            <topPen lineWidth="0.5" lineColor="#000000"/>
+            <bottomPen lineWidth="0.5" lineColor="#000000"/>
+        </box>
+    </style>
+    <style name="Table 2_TH" mode="Opaque" backcolor="#F0F8FF">
+        <box>
+            <pen lineWidth="0.5" lineColor="#FCFAFA"/>
+            <topPen lineWidth="0.5" lineColor="#FCFAFA"/>
+            <leftPen lineWidth="0.5" lineColor="#FCFAFA"/>
+            <bottomPen lineWidth="0.5" lineColor="#FCFAFA"/>
+            <rightPen lineWidth="0.5" lineColor="#FCFAFA"/>
+        </box>
+    </style>
+    <style name="Table 2_CH" mode="Opaque" backcolor="#BFE1FF">
+        <box>
+            <pen lineWidth="0.5" lineColor="#FCFAFA"/>
+            <topPen lineWidth="0.5" lineColor="#FCFAFA"/>
+            <leftPen lineWidth="0.5" lineColor="#FCFAFA"/>
+            <bottomPen lineWidth="0.5" lineColor="#FCFAFA"/>
+            <rightPen lineWidth="0.5" lineColor="#FCFAFA"/>
+        </box>
+    </style>
+    <style name="Table 2_TD" mode="Opaque" backcolor="#FFFFFF">
+        <box>
+            <pen lineWidth="0.5" lineColor="#FCFAFA"/>
+            <topPen lineWidth="0.5" lineColor="#FCFAFA"/>
+            <leftPen lineWidth="0.5" lineColor="#FCFAFA"/>
+            <bottomPen lineWidth="0.5" lineColor="#FCFAFA"/>
+            <rightPen lineWidth="0.5" lineColor="#FCFAFA"/>
+        </box>
+    </style>
     <subDataset name="Dataset1" uuid="63435464-d99f-4a6c-bbeb-8d285b21cea8">
-        <queryString>
-            <![CDATA[]]>
-        </queryString>
+        <field name="goodsMarking" class="java.lang.String"/>
+        <field name="colli" class="java.lang.Long"/>
+        <field name="colliType" class="java.lang.String"/>
+        <field name="typeOfGoods" class="java.lang.String"/>
+        <field name="goodsNumber" class="java.lang.String"/>
+        <field name="grossWeight" class="java.lang.String"/>
+        <field name="volume" class="java.lang.String"/>
     </subDataset>
+    <parameter name="DS1" class="java.util.Collection"/>
     <parameter name="FreightBillNumber" class="java.lang.String"/>
     <parameter name="Transporter" class="java.lang.String"/>
     <parameter name="SenderName" class="java.lang.String"/>
@@ -98,7 +174,7 @@
                 </textElement>
                 <text><![CDATA[Utskriftsdatum]]></text>
             </staticText>
-            <textField textAdjust="ScaleFont" pattern="YYYY-MM-dd">
+            <textField pattern="YYYY-MM-dd">
                 <reportElement x="300" y="10" width="118" height="20" uuid="0bcf824e-4768-4132-aa25-3da6df207610"/>
                 <textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
             </textField>
@@ -286,8 +362,10 @@
                 <text><![CDATA[Telefon]]></text>
             </staticText>
             <componentElement>
-                <reportElement x="362" y="220" width="168" height="37" uuid="9b0c51c9-e5cf-4080-bc0b-64b9f5327ca6"/>
-                <jr:barbecue xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd" type="Code128" drawText="true" checksumRequired="false">
+                <reportElement stretchType="ElementGroupBottom" isPrintRepeatedValues="false" x="312" y="200" width="218" height="55" isRemoveLineWhenBlank="true" uuid="9b0c51c9-e5cf-4080-bc0b-64b9f5327ca6">
+                    <property name="com.jaspersoft.studio.unit.barWidth" value="pixel"/>
+                </reportElement>
+                <jr:barbecue xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd" type="Code128" drawText="true" checksumRequired="false" barWidth="0" barHeight="0">
                     <jr:codeExpression><![CDATA[$P{FreightBillNumber}]]></jr:codeExpression>
                 </jr:barbecue>
             </componentElement>
@@ -317,14 +395,14 @@
                 <reportElement x="469" y="278" width="1" height="22" uuid="efd0db64-ef13-4850-b88f-d08f0b20c11d"/>
             </line>
             <textField isBlankWhenNull="true">
-                <reportElement x="432" y="5" width="116" height="20" uuid="45b88ed6-735b-477a-8e54-ea13316e2fad"/>
+                <reportElement positionType="FixRelativeToBottom" stretchType="ElementGroupBottom" x="432" y="10" width="116" height="16" uuid="45b88ed6-735b-477a-8e54-ea13316e2fad"/>
                 <textElement>
                     <font isBold="true"/>
                 </textElement>
                 <textFieldExpression><![CDATA[$P{FreightBillNumber}]]></textFieldExpression>
             </textField>
             <textField>
-                <reportElement x="420" y="-15" width="140" height="15" uuid="ca76f3a4-32a4-4184-8608-bc16e1d06d7c"/>
+                <reportElement positionType="FixRelativeToBottom" x="420" y="-15" width="140" height="15" uuid="ca76f3a4-32a4-4184-8608-bc16e1d06d7c"/>
                 <textElement>
                     <font size="8"/>
                 </textElement>
@@ -366,7 +444,7 @@
                 <textFieldExpression><![CDATA[$P{TransportInstructionsCode}]]></textFieldExpression>
             </textField>
             <textField>
-                <reportElement x="0" y="187" width="280" height="32" uuid="76ca5c1d-d8e6-4589-850c-8de48bba349f"/>
+                <reportElement x="10" y="187" width="270" height="32" uuid="76ca5c1d-d8e6-4589-850c-8de48bba349f"/>
                 <textElement>
                     <font size="6" isBold="true"/>
                 </textElement>
@@ -505,7 +583,7 @@ slag]]></text>
                 <reportElement x="15" y="690" width="131" height="19" uuid="95eca1ea-2de5-4fa8-96d5-3d641a227ad6"/>
                 <textFieldExpression><![CDATA[$P{SummaryTotalColli}]]></textFieldExpression>
             </textField>
-            <textField textAdjust="ScaleFont">
+            <textField>
                 <reportElement isPrintRepeatedValues="false" x="281" y="160" width="79" height="17" uuid="a5222b1e-abbc-4682-93b1-4c009e959508"/>
                 <textElement textAlignment="Left">
                     <font size="8" isBold="true"/>
@@ -660,6 +738,73 @@ kvitteras]]></text>
                 </textElement>
                 <text><![CDATA[Transportföretagets avsändningsstämpel ev vägningsstämpel]]></text>
             </staticText>
+            <componentElement>
+                <reportElement x="10" y="310" width="537" height="360" uuid="198139c5-e7f8-48e3-b6cb-75a7f8b152dc">
+                    <property name="com.jaspersoft.studio.layout" value="com.jaspersoft.studio.editor.layout.VerticalRowLayout"/>
+                    <property name="com.jaspersoft.studio.table.style.table_header" value="Table 2_TH"/>
+                    <property name="com.jaspersoft.studio.table.style.column_header" value="Table 2_CH"/>
+                    <property name="com.jaspersoft.studio.table.style.detail" value="Table 2_TD"/>
+                </reportElement>
+                <jr:table xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd">
+                    <datasetRun subDataset="Dataset1" uuid="b8ffd4bf-f08e-4a6e-ad24-9de8d3550b54">
+                        <dataSourceExpression><![CDATA[new net.sf.jasperreports.engine.data.JRBeanCollectionDataSource($P{DS1},false)]]></dataSourceExpression>
+                    </datasetRun>
+                    <jr:column width="130" uuid="bfd1d396-237e-4814-a0be-2b019e42fe33">
+                        <property name="com.jaspersoft.studio.components.table.model.column.name" value="Column1"/>
+                        <jr:detailCell style="Table 2_TD" height="30">
+                            <textField>
+                                <reportElement x="0" y="0" width="130" height="30" uuid="cd3e2701-a9ac-40fe-a43e-798f3a4d1244"/>
+                                <textFieldExpression><![CDATA[$F{goodsMarking}]]></textFieldExpression>
+                            </textField>
+                        </jr:detailCell>
+                    </jr:column>
+                    <jr:column width="60" uuid="df693db3-4100-451f-a56d-e73dde93caca">
+                        <property name="com.jaspersoft.studio.components.table.model.column.name" value="Column2"/>
+                        <jr:detailCell style="Table 2_TD" height="30">
+                            <textField>
+                                <reportElement x="0" y="0" width="60" height="30" uuid="d4c4ef63-c994-4394-afe6-5df6db25a295"/>
+                                <textFieldExpression><![CDATA[$F{colli}+ " / " +$F{colliType}]]></textFieldExpression>
+                            </textField>
+                        </jr:detailCell>
+                    </jr:column>
+                    <jr:column width="130" uuid="9856c392-50ef-44e6-9720-5b500202fcb6">
+                        <property name="com.jaspersoft.studio.components.table.model.column.name" value="Column3"/>
+                        <jr:detailCell style="Table 2_TD" height="30">
+                            <textField>
+                                <reportElement x="0" y="0" width="130" height="30" uuid="1d6252bd-97d9-4033-954a-05c28cee3e1a"/>
+                                <textFieldExpression><![CDATA[$F{typeOfGoods}]]></textFieldExpression>
+                            </textField>
+                        </jr:detailCell>
+                    </jr:column>
+                    <jr:column width="50" uuid="b998378e-5cad-465e-9b94-4a3700f4b647">
+                        <property name="com.jaspersoft.studio.components.table.model.column.name" value="Column4"/>
+                        <jr:detailCell style="Table 2_TD" height="30">
+                            <textField>
+                                <reportElement x="0" y="0" width="50" height="30" uuid="4b3bfa0f-f15c-4735-a8b1-f93e73ef0215"/>
+                                <textFieldExpression><![CDATA[$F{goodsNumber}]]></textFieldExpression>
+                            </textField>
+                        </jr:detailCell>
+                    </jr:column>
+                    <jr:column width="90" uuid="490ecf86-4826-4857-88e5-370c4462d068">
+                        <property name="com.jaspersoft.studio.components.table.model.column.name" value="Column5"/>
+                        <jr:detailCell style="Table 2_TD" height="30">
+                            <textField>
+                                <reportElement x="0" y="0" width="90" height="30" uuid="6408ff8a-b6d2-44c6-8375-2484b8503deb"/>
+                                <textFieldExpression><![CDATA[$F{grossWeight}]]></textFieldExpression>
+                            </textField>
+                        </jr:detailCell>
+                    </jr:column>
+                    <jr:column width="77" uuid="75c157ff-d8d3-4b22-901d-2431d4e4c3b0">
+                        <property name="com.jaspersoft.studio.components.table.model.column.name" value="Column6"/>
+                        <jr:detailCell style="Table 2_TD" height="30">
+                            <textField>
+                                <reportElement x="0" y="0" width="77" height="30" uuid="50fd9157-f645-4a3b-b5e0-ea5dfbb249c5"/>
+                                <textFieldExpression><![CDATA[$F{volume}]]></textFieldExpression>
+                            </textField>
+                        </jr:detailCell>
+                    </jr:column>
+                </jr:table>
+            </componentElement>
         </band>
     </detail>
 </jasperReport>
