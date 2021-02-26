@@ -1,15 +1,19 @@
 package se.fraktservice.freightbill.Services;
 import com.sun.mail.smtp.SMTPTransport;
 import org.apache.commons.io.FileUtils;
-import org.hibernate.cfg.Environment;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.core.io.ClassPathResource;
+import org.springframework.core.io.Resource;
+import org.springframework.core.io.ResourceLoader;
 import org.springframework.stereotype.Service;
 import org.springframework.util.ResourceUtils;
 
-import javax.activation.DataHandler;
-import javax.activation.FileDataSource;
+
+import javax.inject.Inject;
 import javax.mail.Message;
 import javax.mail.MessagingException;
 import javax.mail.Multipart;
@@ -29,14 +33,15 @@ public class Mailservice {
 
     private  String EMAIL_FROM;
 
-
    Logger logger =LoggerFactory.getLogger(Mailservice.class);
+
+
 
     public Mailservice() {
         Properties prop =new Properties();
         try {
-            File file = ResourceUtils.getFile("classpath:application.properties");
-            prop.load(new FileInputStream(file.getAbsolutePath()));
+            Resource resource = new ClassPathResource("application.properties");
+            prop.load(resource.getInputStream());
         } catch (IOException e) {
             e.printStackTrace();
         }
