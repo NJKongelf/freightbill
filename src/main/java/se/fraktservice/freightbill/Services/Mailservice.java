@@ -96,7 +96,7 @@ public class Mailservice {
             t.sendMessage(msg, msg.getAllRecipients());
 
             //System.out.println("Response: " + t.getLastServerResponse());
-            logger.info("Response: " + t.getLastServerResponse());
+            logger.info("Response: " + t.getLastServerResponse()+"\nSent to: "+EMAIL_TO);
             t.close();
             file.delete();
 
