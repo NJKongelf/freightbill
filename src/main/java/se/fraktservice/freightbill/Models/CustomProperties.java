@@ -8,6 +8,7 @@ public class CustomProperties {
     private String mailUser;
     private String mailPass;
     private String mailPort;
+    private String mailSSL;
 
     public CustomProperties(){
 
@@ -24,11 +25,15 @@ public class CustomProperties {
         this.mailPort= mailPort;
     }
 
+    @JsonProperty("mailSSL")
+    public String getMailSSL() {
+        return mailSSL;
+    }
+
     @JsonProperty("apiKey")
     public String getApiKey() {
         return apiKey;
     }
-
     @JsonProperty("mailHost")
     public String getMailHost() {
         return mailHost;
@@ -36,7 +41,7 @@ public class CustomProperties {
     @JsonProperty("mailUser")
     public String getMailUser() {
         return mailUser;
-    }
+   }
     @JsonProperty("mailPass")
     public String getMailPass() {
         return mailPass;
@@ -50,12 +55,10 @@ public class CustomProperties {
     public void setApiKey(String apiKey) {
         this.apiKey = apiKey;
     }
-
     @JsonProperty("mailHost")
     public void setMailHost(String mailHost) {
         this.mailHost = mailHost;
     }
-
     @JsonProperty("mailUser")
     public void setMailUser(String mailUser) {
         this.mailUser = mailUser;
@@ -67,5 +70,9 @@ public class CustomProperties {
     @JsonProperty("mailPort")
     public void setMailPort(String mailPort) {
         this.mailPort = mailPort;
+    }
+    @JsonProperty("mailSSL")
+    public void setMailSSL(String mailSSL) {
+        this.mailSSL = mailSSL;
     }
 }

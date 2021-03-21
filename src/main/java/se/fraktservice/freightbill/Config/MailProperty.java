@@ -1,4 +1,4 @@
-package se.fraktservice.freightbill.Services;
+package se.fraktservice.freightbill.Config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -25,6 +25,7 @@ public class MailProperty {
             System.setProperty("spring.mail.port",System.getenv("MAIL_PORT"));
             System.setProperty("spring.mail.username",System.getenv("MAIL_USER"));
             System.setProperty("spring.mail.password",System.getenv("MAIL_PASS"));
+            System.setProperty("spring.mail.ssl",System.getenv("MAIL_SSL"));
         }
     }
 
