@@ -6,14 +6,10 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.core.io.ClassPathResource;
-import org.springframework.core.io.Resource;
-import org.springframework.core.io.ResourceLoader;
 import org.springframework.stereotype.Service;
-import org.springframework.util.ResourceUtils;
+import se.fraktservice.freightbill.Models.CustomProperties;
 
 
-import javax.inject.Inject;
 import javax.mail.Message;
 import javax.mail.MessagingException;
 import javax.mail.Multipart;
@@ -30,25 +26,18 @@ public class Mailservice {
     private  String SMTP_SERVER ;
     private  String USERNAME ;
     private  String PASSWORD ;
-
+    private  String PORT;
     private  String EMAIL_FROM;
 
    Logger logger =LoggerFactory.getLogger(Mailservice.class);
 
 
 
+    @Autowired
+    private MailProperty props;
+
     public Mailservice() {
-        Properties prop =new Properties();
-        try {
-            Resource resource = new ClassPathResource("application.properties");
-            prop.load(resource.getInputStream());
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-        this.SMTP_SERVER = prop.getProperty("spring.mail.host");
-        this.USERNAME =  prop.getProperty("spring.mail.username");
-        this.PASSWORD = prop.getProperty("spring.mail.password");;
-        this.EMAIL_FROM=this.USERNAME;
+
     }
 
     public Mailservice(String SMTP_SERVER, String USERNAME, String PASSWORD,String EMAIL_FROM,byte[] pdffile) {
@@ -57,8 +46,33 @@ public class Mailservice {
         this.PASSWORD = PASSWORD;
         this.EMAIL_FROM =EMAIL_FROM;
     }
+    public void init(){
+        if(System.getProperty("spring.mail.host")==null) {
+            Properties prop = props.readClassProperties();
+            this.SMTP_SERVER = prop.getProperty("spring.mail.host");
+            this.USERNAME = prop.getProperty("spring.mail.username");
+            this.PASSWORD = prop.getProperty("spring.mail.password");
+            this.PORT = prop.getProperty("spring.mail.port");
+            this.EMAIL_FROM = this.USERNAME;
+        }else {
+            this.SMTP_SERVER = System.getProperty("spring.mail.host");
+            this.USERNAME = System.getProperty("spring.mail.username");
+            this.PASSWORD = System.getProperty("spring.mail.password");
+            this.PORT = System.getProperty("spring.mail.port");
+            this.EMAIL_FROM = this.USERNAME;
+        }
+    }
 
-    public void sendEmail(String EMAIL_TO,String EMAIL_SUBJECT,String EMAIL_TEXT,String Freightno,byte[] pdf_file){ Properties prop = System.getProperties();
+    public void setMailserver(CustomProperties props){
+        this.SMTP_SERVER = props.getMailHost();
+        this.USERNAME = props.getMailUser();
+        this.EMAIL_FROM = props.getMailUser();
+        this.PASSWORD = props.getMailPass();
+        this.PORT = props.getMailPort();
+    }
+
+    public void sendEmail(String EMAIL_TO,String EMAIL_SUBJECT,String EMAIL_TEXT,String Freightno,byte[] pdf_file){
+        Properties prop = System.getProperties();
         prop.put("mail.smtp.auth", "true");
 
         Session session = Session.getInstance(prop, null);
@@ -89,9 +103,13 @@ public class Mailservice {
             msg.setContent(mp);
             SMTPTransport t = (SMTPTransport) session.getTransport("smtps");
 
-            // connect
-            t.connect(SMTP_SERVER, USERNAME, PASSWORD);
 
+
+            // connect
+            if(PORT !=null)
+                t.connect(SMTP_SERVER, Integer.parseInt(PORT),USERNAME, PASSWORD);
+            else
+                t.connect(SMTP_SERVER,USERNAME, PASSWORD);
             // send
             t.sendMessage(msg, msg.getAllRecipients());
 
@@ -101,7 +119,7 @@ public class Mailservice {
             file.delete();
 
         } catch (MessagingException | IOException e) {
-            e.printStackTrace();
+            logger.error(e.toString());
         }
 
     }

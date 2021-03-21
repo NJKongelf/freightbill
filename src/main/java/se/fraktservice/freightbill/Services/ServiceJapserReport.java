@@ -34,6 +34,7 @@ public class ServiceJapserReport {
         //BufferedReader txtReader = new BufferedReader(new InputStreamReader(getClass().getResourceAsStream("freightbill.jrxml")));
         Resource resource = new ClassPathResource("freightbill.jrxml");
 
+
         //File file = ResourceUtils.getFile("freightbill.jrxml");
         //Resource resource = new ClassPathResource("freightbill.jrxml");
 
